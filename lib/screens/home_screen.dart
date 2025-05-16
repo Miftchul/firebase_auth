@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // You might want to import your login screen if you plan to add a logout button
-import 'auth/login_screen.dart'; // Uncomment if you have a login screen to navigate back to
+// Uncomment if you have a login screen to navigate back to
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

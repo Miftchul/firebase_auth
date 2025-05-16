@@ -265,17 +265,17 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           backgroundColor: Colors.teal,
                         ).copyWith(
-                          backgroundColor: MaterialStateProperty.resolveWith<Color?>(
-                            (Set<MaterialState> states) {
-                              if (states.contains(MaterialState.pressed)) {
+                          backgroundColor: WidgetStateProperty.resolveWith<Color?>(
+                            (Set<WidgetState> states) {
+                              if (states.contains(WidgetState.pressed)) {
                                 return Theme.of(context).colorScheme.primary.withOpacity(0.8);
-                              } else if (states.contains(MaterialState.disabled)) {
+                              } else if (states.contains(WidgetState.disabled)) {
                                 return Colors.grey;
                               }
                               return Colors.teal;
                             },
                           ),
-                          foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                          foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
                         ),
                         onPressed: _isLoading ? null : _performLogin,
                         child: const Text(
